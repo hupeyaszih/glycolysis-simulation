@@ -48,7 +48,9 @@ const chart = new Chart("myChart", {
     }]
   },
   options: {
-    legend: {display: false}
+    legend: {display: false},
+    responsive: true,
+    maintainAspectRatio: false
   }
 });
 
