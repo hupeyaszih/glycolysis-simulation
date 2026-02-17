@@ -145,7 +145,6 @@ function start_simulation(){
 
 
 function print_results() {
-  document.getElementById("resultPanel").style.display = "block";
   document.getElementById("finalATP").innerText =
     "Son durumdaki ATP sayısı: " + atp;
   document.getElementById("finalPyruvate").innerText =

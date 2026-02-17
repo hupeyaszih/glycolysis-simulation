@@ -3,15 +3,32 @@
     <meta charset="UTF-8">
     <title>Glikoz Simulasyonu</title>
 
+
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script> 
 </head>
 <body>
-    <h1>Glikoz Simulasyonu</h1>
-    <div>
-      <label>Glucose:</label>
+<h1>Glycolysis Simulation</h1>
+
+<div class="main-container">
+
+  <div class="left-panel">
+
+    <div class="panel results-panel">
+      <h3>Final Results</h3>
+      <p><span id="finalATP">-</span></p>
+      <p><span id="finalPyruvate">-</span></p>
+      <p><span id="finalNADH">-</span></p>
+    </div>
+
+    <div class="panel control-panel">
+      <h3>Parameters</h3>
+
+      <label>Glucose</label>
       <input type="number" id="glucoseInput" value="1" min="0">
-      
-      <label>Initial ATP:</label>
+
+      <label>Initial ATP</label>
       <input type="number" id="atpInput" value="2" min="0">
 
       <button onclick="start_simulation()">Start</button>
@@ -19,14 +36,14 @@
       <button onclick="reset_simulation()">Reset</button>
     </div>
 
-    <div id="resultPanel" style="display:none;">
-      <h2>Final Results</h2>
-      <p id="finalATP"></p>
-      <p id="finalPyruvate"></p>
-      <p id="finalNADH"></p>
-    </div>
+  </div>
 
-    <canvas id="myChart" style="width:100%;max-width:700px"></canvas> 
+  <div class="chart-panel">
+    <canvas id="myChart"></canvas>
+  </div>
+
+</div>
+
     <script src="./app.js"></script> 
 </body>
 </html>
